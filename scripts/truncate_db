@@ -1,0 +1,12 @@
+#!/bin/bash
+
+re='^[0-9]+$'
+cache_db_path="./cache.db"
+
+if ! [[ $1 =~ $re ]] ; then
+   echo "Invalid value passed; Not a number" >&2; exit 1
+fi
+
+sql="DELETE FROM rss_item WHERE datetime(rss_item.pubDate, 'unixepoch') < datetime('now', '-$1 days'); VACUUM;"
+sqlite3 $cache_db_path "$sql"
+echo "Newsboat cache truncated"
