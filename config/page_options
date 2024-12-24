@@ -1,0 +1,8 @@
+# This denotes whether Newsboat cache should be saved
+# during page rebuild
+PERSIST_NEWSBOAT_CACHE=0
+# Set number of days articles will be persisted in cache
+# if its saved using above param.
+NEWSBOAT_CACHE_RETENTION_DAYS=30
+# Set it to 1 to automatically update Liveboat.
+ENABLE_AUTOMATIC_UPDATES=0

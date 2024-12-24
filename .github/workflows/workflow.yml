@@ -1,0 +1,88 @@
+name: Liveboat feed build
+
+# on: push
+on:
+  schedule:
+    - cron: "0 * * * *"
+  push:
+      tags:
+        - 'build*'
+
+jobs:
+  liveboat-feed-build:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+      pull-requests: write
+    steps:
+
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+          ref: 'master'
+
+      - name: Install deps
+        run: sudo apt-get update && sudo apt-get install snapd sqlite3
+
+      - name: Install newsboat
+        run: sudo snap install newsboat
+
+      - name: Fetch liveboat
+        run: |
+          mkdir -p ./bin
+          sh -c 'wget -O ./bin/liveboat https://github.com/exaroth/liveboat/releases/download/stable/liveboat-linux-musl && chmod +x ./bin/liveboat'
+
+      - name: Source options
+        uses: falti/dotenv-action@v1.1.4
+        with:
+          path: ./config/page_options
+          keys-case: bypass
+          export-variables: true
+
+      - name: Set up gitconfig
+        run: |
+          git config --local user.email "liveboat-builder@github.com"
+          git config --local user.name "liveboat-feed-builder"
+        shell: bash
+
+      - name: Cleanup last build
+        run: |
+          if echo $(git log --oneline -1) | grep -q "Feed rebuild @"; then
+              git reset --soft HEAD~1
+              git stash push -m old_feeds ./docs 
+          fi
+        shell: bash
+
+      - name: Update Liveboat version and templates
+        run: |
+          make update;
+          git add ./templates ./config
+        if: env.ENABLE_AUTOMATIC_UPDATES == '1'
+
+      - name: Run newsboat
+        run: newsboat -u config/newsboat-urls -C config/newsboat-config -c cache.db -x reload
+
+      - name: Run liveboat
+        run: ./bin/liveboat --template-path templates/default --config-file config/liveboat-config.toml
+
+      - name: Truncate database
+        run: |
+          ./scripts/truncate_db ${{ env.NEWSBOAT_CACHE_RETENTION_DAYS }}
+          git add ./cache.db
+        if: env.PERSIST_NEWSBOAT_CACHE == '1'
+
+      - name: Commit files
+        id: commit
+        run: |
+          git add ./docs
+          let ts=$(date +"%s")
+          git diff-index --quiet HEAD || git commit -m "Feed rebuild @ ${ts}" -a
+        shell: bash
+
+      - name: Push changes
+        uses: ad-m/github-push-action@master
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          force_with_lease: true
+          branch: master
