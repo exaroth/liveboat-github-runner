@@ -1,6 +1,5 @@
 name: Liveboat feed build
 
-# on: push
 on:
   schedule:
     - cron: "0 * * * *"
@@ -23,10 +22,10 @@ jobs:
           ref: 'master'
 
       - name: Install deps
-        run: sudo apt-get update && sudo apt-get install snapd sqlite3
+        run: sudo apt-get update && sudo apt-get install sqlite3 snapd
 
       - name: Install newsboat
-        run: sudo snap install newsboat
+        run: source ./scripts/retry.sh && with_retry 5 sudo snap install newsboat
 
       - name: Fetch liveboat
         run: |
@@ -50,7 +49,7 @@ jobs:
         run: |
           if echo $(git log --oneline -1) | grep -q "Feed rebuild @"; then
               git reset --soft HEAD~1
-              git stash push -m old_feeds ./docs 
+              git stash push -m old_feeds ./docs
           fi
         shell: bash
 
@@ -61,7 +60,7 @@ jobs:
         if: env.ENABLE_AUTOMATIC_UPDATES == '1'
 
       - name: Run newsboat
-        run: newsboat -u config/newsboat-urls -C config/newsboat-config -c cache.db -x reload
+        run: newsboat -u config/urls -C config/newsboat-config -c cache.db -x reload
 
       - name: Run liveboat
         run: ./bin/liveboat --template-path templates/default --config-file config/liveboat-config.toml
@@ -79,6 +78,11 @@ jobs:
           let ts=$(date +"%s")
           git diff-index --quiet HEAD || git commit -m "Feed rebuild @ ${ts}" -a
         shell: bash
+
+      - name: Clean unreachable objects
+        run: |
+          git reflog expire --expire-unreachable=now
+          git gc --prune=now
 
       - name: Push changes
         uses: ad-m/github-push-action@master
