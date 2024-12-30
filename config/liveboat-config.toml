@@ -7,6 +7,9 @@
 site_path = "/liveboat-github-runner/"
 # Title of the site
 title = "Liveboat Demo"
+# Update site url if you're planning on using aggregated OPML
+# channel Liveboat exposes.
+site_url = "https://konrad.website/liveboat-github-runner/"
 # Maximum number of days for which Liveboat will include
 # articles for.
 time_threshold = 40
@@ -15,6 +18,6 @@ time_threshold = 40
 show_read_articles = true
 # Below variables define default directories 
 # and typically should not be changed.
-newsboat_urls_file = "./config/newsboat-urls"
+newsboat_urls_file = "./config/urls"
 newsboat_cache_file = "./cache.db"
 build_dir = "./docs"
