@@ -2,7 +2,7 @@ version = "1.0.4"
 builder = "spa"
 
 [template_settings]
-accent-color = "#3c5e8b"
 text-color = "#c7cfcc"
 highlight-color = "#73bed3"
-background-color = "#181818"
+accent-color = "#2D4566"
+background-color = "#121414"
