@@ -1,8 +1,11 @@
-version = "1.0.4"
+version = "1.3.1"
 builder = "spa"
 
 [template_settings]
-accent-color = "#3c5e8b"
+accent-color = "#2D4566"
 text-color = "#c7cfcc"
+background-color = "#121414"
 highlight-color = "#73bed3"
-background-color = "#181818"
+custom-color = "#f3a833"
+autoreload = "1"
+youtube-embed-params = "autoplay=1"

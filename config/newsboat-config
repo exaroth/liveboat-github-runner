@@ -5,8 +5,6 @@ reload-time 20
 reload-threads 2
 prepopulate-query-feeds yes
 show-read-feeds no
-confirm-mark-all-feeds-read yes
-confirm-mark-feed-read no
 keep-articles-days 30
 
 ignore-article "*" "title =~ \"Sponsor\""
