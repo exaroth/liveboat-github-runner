@@ -26,16 +26,19 @@
     <style>
         :root {
             {{#if template_settings.text-color}}
-            --color-text: {{template_settings.text-color}};
+            --color-text: {{template_settings.text-color}} !important;
             {{/if}}
             {{#if template_settings.highlight-color}}
-            --color-highlight: {{template_settings.highlight-color}};
+            --color-highlight: {{template_settings.highlight-color}} !important;
             {{/if}}
             {{#if template_settings.accent-color}}
-            --color-accent: {{template_settings.accent-color}};
+            --color-accent: {{template_settings.accent-color}} !important;
             {{/if}}
             {{#if template_settings.background-color}}
-            --color-background: {{template_settings.background-color}};
+            --color-background: {{template_settings.background-color}} !important;
+            {{/if}}
+            {{#if template_settings.custom-color}}
+            --color-custom: {{template_settings.custom-color}} !important;
             {{/if}}
         }
     </style>
@@ -44,19 +47,45 @@
   <body>
       <script>
       window.buildTime = {{ build_time }};
+      window.templateVer = "{{ template_version }}";
       window.pageTitle = '{{ options.title }}';
       window.sitePath = '{{ options.site_path }}';
+      window.templateVersion = "{{ template_version }}";
       window.feeds = [
-          {{#each feeds}}
-          {
-            id: "{{this.id}}",
-            url: "{{this.url}}",
-            title: "{{this.title}}",
-            displayTitle: "{{this.displayTitle}}",
-            feedLink: "{{this.feedLink}}",
-          },
-          {{/each}}
+    {{#each feeds}}
+        {{#unless this.isEmpty}}
+            {{#unless this.isHidden}}
+            {
+                id: "{{this.id}}",
+                url: "{{this.url}}",
+                title: "{{this.title}}",
+                displayTitle: "{{this.displayTitle}}",
+                feedLink: "{{this.feedLink}}",
+                itemCount: "{{this.itemCount}}",
+                isQuery: {{this.isQuery}},
+                tags: [{{#each this.tags}}
+                    "{{this}}",
+                    {{/each}}]
+            },
+            {{/unless}}
+        {{/unless}}
+    {{/each}}
           ];
+    {{#if template_settings.autoreload}}
+      window.autoreload = {{template_settings.autoreload}}
+    {{/if}}
+    {{#if template_settings.repo-url}}
+      window.repoUrl = "{{template_settings.repo-url}}"
+    {{/if}}
+    {{#if template_settings.subheader-text}}
+      window.subHeaderText = "{{template_settings.subheader-text}}"
+    {{/if}}
+    {{#if template_settings.header-svg}}
+      window.headerSvg = "{{template_settings.header-svg}}"
+    {{/if}}
+    {{#if template_settings.youtube-embed-params}}
+      window.youtubeEmbedParams = "{{{template_settings.youtube-embed-params}}}"
+    {{/if}}
       </script>
       <div id="app"></div>
 
