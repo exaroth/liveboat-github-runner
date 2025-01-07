@@ -1,8 +1,8 @@
-version = "1.0.4"
+version = "1.0.7"
 builder = "spa"
 
 [template_settings]
+background-color = "#121414"
 text-color = "#c7cfcc"
 highlight-color = "#73bed3"
 accent-color = "#2D4566"
-background-color = "#121414"
