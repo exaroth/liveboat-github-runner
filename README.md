@@ -65,6 +65,7 @@ text-color = "#c7cfcc"
 highlight-color = "#73bed3"
 accent-color = "#3c5e8b"
 background-color = "#181818"
+custom-color = "#f3a833"
 ```
 
 For more advanced template modifications see [Template development guide](https://github.com/exaroth/liveboat/tree/develop/templates).
@@ -131,7 +132,7 @@ By default feed page will be rebuilt every hour, if you want to change it edit `
 ```
 ## Template updates
 
-In order to manually update `Liveboat` binary and templates execute `make update` alternatively you can enable automatic updates by setting `ENABLE_AUTOMATIC_UPDATES` to `1` in `./config/page_options` file which will check for new version of liveboat during every page rebuild.
+In order to manually update templates supplied with Liveboat execute `make update`, alternatively you can enable automatic updates by setting `ENABLE_AUTOMATIC_UPDATES` to `1` in `./config/page_options` file which will check for new version during every page rebuild.
 
 ## License
 Liveboat is provided under MIT License, see `LICENSE` file for details
