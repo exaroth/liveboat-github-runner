@@ -22,20 +22,21 @@
     <meta name="apple-mobile-web-app-status-bar-style" content="black">
     <meta name="apple-mobile-web-app-title" content="Liveboat Demo">
 
-    <link rel="stylesheet" href="./assets/index.css?tv=1.0.7">
+    <link rel="stylesheet" href="./assets/index.css?tv=1.1.2">
     <style>
         :root {
-            --color-text: #c7cfcc;
-            --color-highlight: #73bed3;
-            --color-accent: #2D4566;
-            --color-background: #121414;
+            --color-text: #c7cfcc !important;
+            --color-highlight: #73bed3 !important;
+            --color-accent: #2D4566 !important;
+            --color-background: #121414 !important;
+            --color-custom: #f3a833 !important;
         }
     </style>
 
   </head>
   <body>
       <script>
-      window.buildTime = 1737349814;
+      window.buildTime = 1737788811;
       window.pageTitle = 'Liveboat Demo';
       window.sitePath = '/liveboat-github-runner/';
       window.feeds = [
@@ -44,321 +45,402 @@
                 url: "",
                 title: "Dev News - Last 2 days",
                 displayTitle: "Dev News - Last 2 days",
-                feedLink: ""
+                feedLink: "",
+                itemCount: "72",
+                isQuery: true
             },
             {
                 id: "2k6wXud2N91xpf4PwnSfo4j5WSuTNX5k",
                 url: "",
                 title: "Tech News - Last 2 days",
                 displayTitle: "Tech News - Last 2 days",
-                feedLink: ""
+                feedLink: "",
+                itemCount: "86",
+                isQuery: true
             },
             {
                 id: "6NqfXMJvjScFnK97hKKrz4CmtGsYc",
                 url: "",
                 title: "World News - Last day",
                 displayTitle: "World News - Last day",
-                feedLink: ""
+                feedLink: "",
+                itemCount: "82",
+                isQuery: true
             },
             {
                 id: "ETKeSdT1Jvn",
                 url: "",
                 title: "Podcasts",
                 displayTitle: "Podcasts",
-                feedLink: ""
+                feedLink: "",
+                itemCount: "70",
+                isQuery: true
             },
             {
                 id: "4PaGeZyGUC",
                 url: "",
                 title: "Youtube",
                 displayTitle: "Youtube",
-                feedLink: ""
+                feedLink: "",
+                itemCount: "213",
+                isQuery: true
             },
             {
                 id: "VMK7D8tQvwsLtnxKHzNdF9c4Yhtuqm",
                 url: "https://hnrss.org/best",
                 title: "Hacker News: Best",
                 displayTitle: "HN",
-                feedLink: "https://news.ycombinator.com/best"
+                feedLink: "https://news.ycombinator.com/best",
+                itemCount: "30",
+                isQuery: false
             },
             {
                 id: "82kPqomaPXmNomrHzpZWfbkQxiiNUBTAYKxHR5qZBEpf",
                 url: "https://hnrss.org/show?points&#x3D;60",
                 title: "Hacker News: Show HN",
                 displayTitle: "HN Show",
-                feedLink: "https://news.ycombinator.com/shownew"
+                feedLink: "https://news.ycombinator.com/shownew",
+                itemCount: "15",
+                isQuery: false
             },
             {
                 id: "4W3i2hyrJTVfcLq85rWgduVQ3y3BMzrSD4pVUCMqPpFhmXWpqxQ",
                 url: "https://hnrss.org/frontpage?points&#x3D;75",
                 title: "Hacker News: Front Page",
                 displayTitle: "HN Front",
-                feedLink: "https://news.ycombinator.com/"
+                feedLink: "https://news.ycombinator.com/",
+                itemCount: "20",
+                isQuery: false
             },
             {
                 id: "CQdwDV8xyajeX5DKoSYfBQhN4kkXBaTmXPYgJyANUWHyjCo5BpHUjy5gJhgngST",
                 url: "http://rss.slashdot.org/Slashdot/slashdotLinux",
                 title: "Slashdot: Linux",
                 displayTitle: "Dev - Slashdot - Linux",
-                feedLink: "https://linux.slashdot.org/"
+                feedLink: "https://linux.slashdot.org/",
+                itemCount: "7",
+                isQuery: false
             },
             {
                 id: "2BCfkBRHmbhytY8nm9spZ4inpFkqHBsLKs6LqzTxwmhuxSvfYzGLsd",
                 url: "https://www.cyberciti.com/atom/atom.xml",
                 title: "nixCraft: Linux Tips, Hacks, Tutorials, And Ideas In Blog Format (RSS/FEED)",
                 displayTitle: "Dev - NixCraft",
-                feedLink: "https://www.cyberciti.biz/atom/"
+                feedLink: "https://www.cyberciti.biz/atom/",
+                itemCount: "3",
+                isQuery: false
             },
             {
                 id: "6gUbcJtcgqw1wQBapm8qwcP58MMnPvoDmUVDva7XtKUuLQTDpuyDxDo1yehnZDohDQ6a5p",
                 url: "http://rss.slashdot.org/Slashdot/slashdotDevelopers",
                 title: "Slashdot: Developers",
                 displayTitle: "Dev - Slashdot - Dev",
-                feedLink: "https://developers.slashdot.org/"
+                feedLink: "https://developers.slashdot.org/",
+                itemCount: "15",
+                isQuery: false
             },
             {
-                id: "F7pXcmPnWkLEHkvQBb3zXkgdiHy14GQcP2RQp",
-                url: "http://aphyr.com/posts.atom",
-                title: "Aphyr: Posts",
-                displayTitle: "Dev - Aphyr",
-                feedLink: "http://aphyr.com/posts.atom"
+                id: "MvwLKznkcWQJt9LV3qspiNNstpReRGojdXM3bsYDh",
+                url: "https://kubernetes.io/feed.xml",
+                title: "Kubernetes Blog",
+                displayTitle: "Dev - Kubernetes Blog",
+                feedLink: "https://kubernetes.io/",
+                itemCount: "1",
+                isQuery: false
             },
             {
                 id: "USgKoryE83j5SszZjyr68sh7DjLn4j6MWUagcNjQES7kQ1n2HXebXN4bJpBn8stf6LqSMrbny1unc4R1hi6qmf",
                 url: "https://www.reddit.com/r/golang/top/.rss?sort&#x3D;top&amp;t&#x3D;day&amp;limit&#x3D;6",
                 title: "top scoring links : golang",
                 displayTitle: "Reddit - Go",
-                feedLink: "https://www.reddit.com/r/golang/top/?sort&#x3D;top&amp;t&#x3D;day&amp;limit&#x3D;6"
+                feedLink: "https://www.reddit.com/r/golang/top/?sort&#x3D;top&amp;t&#x3D;day&amp;limit&#x3D;6",
+                itemCount: "6",
+                isQuery: false
             },
             {
                 id: "2Qhhdda6Qnbf8RCfUPd4nB9sSt2WDQfEpF7H3gCnZZ4AsfbGMy3RmrCa6gigGY6TkbrrJn4wmHXXNYcVj1bK",
                 url: "https://www.reddit.com/r/rust/top/.rss?sort&#x3D;top&amp;t&#x3D;day&amp;limit&#x3D;6",
                 title: "top scoring links : rust",
                 displayTitle: "Reddit - Rust",
-                feedLink: "https://www.reddit.com/r/rust/top/?sort&#x3D;top&amp;t&#x3D;day&amp;limit&#x3D;6"
+                feedLink: "https://www.reddit.com/r/rust/top/?sort&#x3D;top&amp;t&#x3D;day&amp;limit&#x3D;6",
+                itemCount: "6",
+                isQuery: false
             },
             {
                 id: "7DceLgR4szFyHjpUotrBgPp9fEDdwmRmyXGW53xLQnbPAifjKVFPj1dyKJ6sHa1bC6AC9QFBhYUJLmJ6GyX57",
                 url: "https://www.reddit.com/r/linux/top/.rss?sort&#x3D;top&amp;t&#x3D;day&amp;limit&#x3D;6",
                 title: "top scoring links : linux",
                 displayTitle: "Reddit - Linux",
-                feedLink: "https://www.reddit.com/r/linux/top/?sort&#x3D;top&amp;t&#x3D;day&amp;limit&#x3D;6"
+                feedLink: "https://www.reddit.com/r/linux/top/?sort&#x3D;top&amp;t&#x3D;day&amp;limit&#x3D;6",
+                itemCount: "6",
+                isQuery: false
             },
             {
                 id: "46aP2QbqUqBrWfYqAibo8xS24qkvbDNgWZUrxgZ6XNcyUn6fFxkgS1aSWJWwPwaqFp34erWr8NxVvd6jro8uiaPvDUjw",
                 url: "https://www.reddit.com/r/kubernetes/top/.rss?sort&#x3D;top&amp;t&#x3D;day&amp;limit&#x3D;6",
                 title: "top scoring links : kubernetes",
                 displayTitle: "Reddit - Kubernetes",
-                feedLink: "https://www.reddit.com/r/kubernetes/top/?sort&#x3D;top&amp;t&#x3D;day&amp;limit&#x3D;6"
+                feedLink: "https://www.reddit.com/r/kubernetes/top/?sort&#x3D;top&amp;t&#x3D;day&amp;limit&#x3D;6",
+                itemCount: "6",
+                isQuery: false
             },
             {
                 id: "EfcLDDAkyqguXw9Vbtcae7fRhxCsY1chPUNLpwbK9oHS42b4dGEMeGvA2hWHB2j3LFSAo7qhibLNgPBcA5djbGp95Jk5T",
                 url: "https://www.reddit.com/r/programming/top/.rss?sort&#x3D;top&amp;t&#x3D;day&amp;limit&#x3D;6",
                 title: "top scoring links : programming",
                 displayTitle: "Reddit - Programming",
-                feedLink: "https://www.reddit.com/r/programming/top/?sort&#x3D;top&amp;t&#x3D;day&amp;limit&#x3D;6"
+                feedLink: "https://www.reddit.com/r/programming/top/?sort&#x3D;top&amp;t&#x3D;day&amp;limit&#x3D;6",
+                itemCount: "6",
+                isQuery: false
             },
             {
                 id: "BRWJ2YmdUFoz1jUcCg5P21RYgb4CmSRDHkju2uMS7GB1447d",
                 url: "https://blog.pythonlibrary.org/feed",
                 title: "Mouse Vs Python",
                 displayTitle: "Dev - Python Blog",
-                feedLink: "https://www.blog.pythonlibrary.org/"
+                feedLink: "https://www.blog.pythonlibrary.org/",
+                itemCount: "1",
+                isQuery: false
             },
             {
                 id: "3MxaK2JpEReqG7uUTfHxTELDZk2vRYBtH7tbJ586soFdUhL",
                 url: "https://blog.codinghorror.com/rss/",
                 title: "Coding Horror",
                 displayTitle: "Dev - Coding Horror",
-                feedLink: "https://blog.codinghorror.com/"
+                feedLink: "https://blog.codinghorror.com/",
+                itemCount: "1",
+                isQuery: false
             },
             {
                 id: "B69zEhWZA8UEAMn3PhHgwARc5WGncWEYFkmfHhvUDpmmwCTb86SBbpJu5kTKr3v5o6YroQ4JppqEFxmGRGmiRESeGsJuLMU6AM6VCzYY",
                 url: "https://www.youtube.com/feeds/videos.xml?channel_id&#x3D;UCvqbFHwN-nwalWPjPUKpvTA",
                 title: "CNCF [Cloud Native Computing Foundation]",
                 displayTitle: "Dev - CNCF",
-                feedLink: "https://www.youtube.com/channel/UCvqbFHwN-nwalWPjPUKpvTA"
+                feedLink: "https://www.youtube.com/channel/UCvqbFHwN-nwalWPjPUKpvTA",
+                itemCount: "15",
+                isQuery: false
             },
             {
                 id: "B69zEhWZA8UEAMn3PhHgwARc5WGncWEYFkmfHhvUDpmmwCTb86SBbpJu5kTKr3v5o6YroQ4JpppN9NLNrdRZgCdnN5NoKNcpbU8nxLPJ",
                 url: "https://www.youtube.com/feeds/videos.xml?channel_id&#x3D;UCsBjURrPoezykLs9EqgamOA",
                 title: "Fireship",
                 displayTitle: "Dev - Fireship",
-                feedLink: "https://www.youtube.com/channel/UCsBjURrPoezykLs9EqgamOA"
+                feedLink: "https://www.youtube.com/channel/UCsBjURrPoezykLs9EqgamOA",
+                itemCount: "7",
+                isQuery: false
             },
             {
                 id: "B69zEhWZA8UEAMn3PhHgwARc5WGncWEYFkmfHhvUDpmmwCTb86SBbpJu5kTKr3v5o6YroQ4Jppcztx1sqULsdY4zpYkgotFx6rQ5jWnr",
                 url: "https://www.youtube.com/feeds/videos.xml?channel_id&#x3D;UCIat2Cdg661wF5DQDWTQAmg",
                 title: "probabl",
                 displayTitle: "Dev - Probabl",
-                feedLink: "https://www.youtube.com/channel/UCIat2Cdg661wF5DQDWTQAmg"
-            },
-            {
-                id: "BRWJ2YmdUFp1VkEaibbVg9gmctcLUWiZeYcbFJGMkd7Cuwto",
-                url: "https://medium.com/@kyodo-tech/feed",
-                title: "Stories by Kyodo Tech on Medium",
-                displayTitle: "Dev - Kyodo-Tech",
-                feedLink: "https://medium.com/@kyodo-tech?source&#x3D;rss-ac02ab142942------2"
+                feedLink: "https://www.youtube.com/channel/UCIat2Cdg661wF5DQDWTQAmg",
+                itemCount: "7",
+                isQuery: false
             },
             {
                 id: "AXJnNj1p7gNGHeShbM5NH2qrEU51AXyHm",
                 url: "https://jvns.ca/atom.xml",
                 title: "Julia Evans",
                 displayTitle: "Dev - Julia Evans",
-                feedLink: "https://jvns.ca/atom.xml"
+                feedLink: "https://jvns.ca/atom.xml",
+                itemCount: "1",
+                isQuery: false
             },
             {
                 id: "3MxaK2JpEReqbaaoXRjhqtHgzLzs7yD1MzDHmZohMpeP54G",
                 url: "https://martinfowler.com/feed.atom",
                 title: "Martin Fowler",
                 displayTitle: "Dev - Martin Fowler",
-                feedLink: "https://martinfowler.com/feed.atom"
+                feedLink: "https://martinfowler.com/feed.atom",
+                itemCount: "6",
+                isQuery: false
             },
             {
                 id: "BRWJ2YmdUFp2T1vhh7n3V5SVNJLVQ56WoZtJvhiNDyE3aj1V",
                 url: "https://transactional.blog/feed.xml",
                 title: "Transactional",
                 displayTitle: "Dev - Transactional",
-                feedLink: "https://transactional.blog/"
+                feedLink: "https://transactional.blog/",
+                itemCount: "2",
+                isQuery: false
             },
             {
                 id: "6C2W1azD1rBsV4qJANNfruBrvGgdqLWrPGWtk6Mp1WgfCNcfvBZHFQw",
                 url: "https://newsletter.systemdesign.one/feed",
                 title: "The System Design Newsletter",
                 displayTitle: "Dev - System Design Newsletter",
-                feedLink: "https://newsletter.systemdesign.one/"
+                feedLink: "https://newsletter.systemdesign.one/",
+                itemCount: "3",
+                isQuery: false
             },
             {
                 id: "2bP4pJr4wVimh6yine63HqNeafoyheTFz1gqCrQ4h7Z",
                 url: "https://blog.algomaster.io/feed",
                 title: "AlgoMaster Newsletter",
                 displayTitle: "Dev - Algomaster",
-                feedLink: "https://blog.algomaster.io/"
+                feedLink: "https://blog.algomaster.io/",
+                itemCount: "8",
+                isQuery: false
             },
             {
                 id: "Y2iXpRRkNSnxtBLmMYZFrnqj4bsEj1XB8agfaptmWsYpB",
                 url: "https://vnotes.pages.dev/atom.xml",
                 title: "vladkens.cc",
                 displayTitle: "Dev - vladkens",
-                feedLink: "https://vladkens.cc/"
+                feedLink: "https://vladkens.cc/",
+                itemCount: "2",
+                isQuery: false
             },
             {
                 id: "368La1qZAv727wqsvC8sbLBZGryhH8SVwbTpqXaweRcuutW1gXksMDmNaCNQmszjC3ZZGEBhaSSEnnHmMXtmcZ71",
                 url: "https://access.acast.com/rss/theeconomistmorningbriefing/default",
                 title: "The World in Brief from The Economist",
                 displayTitle: "News - Daily Brief",
-                feedLink: "https://www.economist.com/audio/podcasts/the-world-in-brief"
+                feedLink: "https://www.economist.com/audio/podcasts/the-world-in-brief",
+                itemCount: "1",
+                isQuery: false
             },
             {
                 id: "B69zEhWZA8UEAMn3PhHgwARc5WGncWEYFkmfHhvUDpmmwCTb86SBbpJu5kTKr3v5o6YroQ4JppnEufZaA96bvPyKqWS5DRkgXpf9zJK8",
                 url: "https://www.youtube.com/feeds/videos.xml?channel_id&#x3D;UCknLrEdhRCp1aegoMqRaCZg",
                 title: "DW News",
                 displayTitle: "News - DW",
-                feedLink: "https://www.youtube.com/channel/UCknLrEdhRCp1aegoMqRaCZg"
+                feedLink: "https://www.youtube.com/channel/UCknLrEdhRCp1aegoMqRaCZg",
+                itemCount: "15",
+                isQuery: false
             },
             {
                 id: "B69zEhWZA8UEAMn3PhHgwARc5WGncWEYFkmfHhvUDpmmwCTb86SBbpJu5kTKr3v5o6YroQ4JppXXAQCe8LGUnBWHDnF4s2jjN39bSf9J",
                 url: "https://www.youtube.com/feeds/videos.xml?channel_id&#x3D;UC52X5wxOL_s5yw0dQk7NtgA",
                 title: "Associated Press",
                 displayTitle: "News - AP",
-                feedLink: "https://www.youtube.com/channel/UC52X5wxOL_s5yw0dQk7NtgA"
+                feedLink: "https://www.youtube.com/channel/UC52X5wxOL_s5yw0dQk7NtgA",
+                itemCount: "15",
+                isQuery: false
             },
             {
                 id: "B69zEhWZA8UEAMn3PhHgwARc5WGncWEYFkmfHhvUDpmmwCTb86SBbpJu5kTKr3v5o6YroQ4JppdVoDHLN4yWZAVi5Siw4M8AuwbDYBxU",
                 url: "https://www.youtube.com/feeds/videos.xml?channel_id&#x3D;UCK7tptUDHh-RYDsdxO1-5QQ",
                 title: "The Wall Street Journal",
                 displayTitle: "News - Wall Street Journal",
-                feedLink: "https://www.youtube.com/channel/UCK7tptUDHh-RYDsdxO1-5QQ"
+                feedLink: "https://www.youtube.com/channel/UCK7tptUDHh-RYDsdxO1-5QQ",
+                itemCount: "15",
+                isQuery: false
             },
             {
                 id: "B69zEhWZA8UEAMn3PhHgwARc5WGncWEYFkmfHhvUDpmmwCTb86SBbpJu5kTKr3v5o6YroQ4JppcxvGLUpev4ECsNqF1CwVLDFzmk9jft",
                 url: "https://www.youtube.com/feeds/videos.xml?channel_id&#x3D;UCIALMKvObZNtJ6AmdCLP7Lg",
                 title: "Bloomberg Television",
                 displayTitle: "News - Bloomberg ",
-                feedLink: "https://www.youtube.com/channel/UCIALMKvObZNtJ6AmdCLP7Lg"
+                feedLink: "https://www.youtube.com/channel/UCIALMKvObZNtJ6AmdCLP7Lg",
+                itemCount: "15",
+                isQuery: false
             },
             {
                 id: "B69zEhWZA8UEAMn3PhHgwARc5WGncWEYFkmfHhvUDpmmwCTb86SBbpJu5kTKr3v5o6YroQ4JppmRsQgMUgX4VBgyP4xYdG4qwFSE7Va8",
                 url: "https://www.youtube.com/feeds/videos.xml?channel_id&#x3D;UChqUTb7kYRX8-EiaN3XFrSQ",
                 title: "Reuters",
                 displayTitle: "News - Reuters ",
-                feedLink: "https://www.youtube.com/channel/UChqUTb7kYRX8-EiaN3XFrSQ"
+                feedLink: "https://www.youtube.com/channel/UChqUTb7kYRX8-EiaN3XFrSQ",
+                itemCount: "15",
+                isQuery: false
             },
             {
                 id: "46aP2QbqUqBrWfYqAibo8xS24qkvbDNgWZV4Z6rf2nuJ3cBJ971pKb6XZkWhnDxr957c82fPU4Cg4j63MSkVSUXrPi55",
                 url: "https://www.reddit.com/r/worldnews/top/.rss?sort&#x3D;top&amp;t&#x3D;day&amp;limit&#x3D;10",
                 title: "top scoring links : worldnews",
                 displayTitle: "News - Reddit - World News",
-                feedLink: "https://www.reddit.com/r/worldnews/top/?sort&#x3D;top&amp;t&#x3D;day&amp;limit&#x3D;10"
+                feedLink: "https://www.reddit.com/r/worldnews/top/?sort&#x3D;top&amp;t&#x3D;day&amp;limit&#x3D;10",
+                itemCount: "10",
+                isQuery: false
             },
             {
                 id: "368La1qZAv72idE55Whuffkk2TBtHuSndX6iNywdUkLBDxxx55cLvowsw5Rj5VbHUHjCYUBR5tHfX6BAYFQZS3af",
                 url: "https://www.reddit.com/r/europe/top/.rss?sort&#x3D;top&amp;t&#x3D;day&amp;limit&#x3D;10",
                 title: "top scoring links : europe",
                 displayTitle: "News - Reddit - Europe",
-                feedLink: "https://www.reddit.com/r/europe/top/?sort&#x3D;top&amp;t&#x3D;day&amp;limit&#x3D;10"
+                feedLink: "https://www.reddit.com/r/europe/top/?sort&#x3D;top&amp;t&#x3D;day&amp;limit&#x3D;10",
+                itemCount: "10",
+                isQuery: false
             },
             {
                 id: "7ohP4GDMGPrTecAsbdk4Ux7kX8oRRvqavmV8ox2Lg53hhcq7wNE81x1V7wRzBRAAwq1qwKSjzyWP8JBzbs6Uq6UgbUcg21dXiqZm",
                 url: "https://access.acast.com/rss/c939f8d1-c4bc-478e-8bb9-e5343f9a7ab5/default",
                 title: "Dan Snow&#x27;s History Hit",
                 displayTitle: "Podcast - HistoryHit",
-                feedLink: "https://www.historyhit.com/podcasts/"
+                feedLink: "https://www.historyhit.com/podcasts/",
+                itemCount: "13",
+                isQuery: false
             },
             {
                 id: "3MxaK2JpEReqHsHNayp5wegcsbA3Uqs1xb7War6KS5tG443",
                 url: "https://changelog.com/podcast/feed",
                 title: "The Changelog: Software Development, Open Source",
                 displayTitle: "Podcast - Changelog",
-                feedLink: "https://changelog.com/podcast"
+                feedLink: "https://changelog.com/podcast",
+                itemCount: "9",
+                isQuery: false
             },
             {
                 id: "B69zEhWZA8UEAMn3PhHgwARc5WGncWEYFkmfHhvUDpmmwCTb86SBbpJu5kTKr3v5o6YroQ4JpprHFm2UV2vWRfa9mX2y2pfXs5n2xbtt",
                 url: "https://www.youtube.com/feeds/videos.xml?channel_id&#x3D;UCzQUP1qoWDoEbmsQxvdjxgQ",
                 title: "PowerfulJRE",
                 displayTitle: "Podcast - Joe Rogan",
-                feedLink: "https://www.youtube.com/channel/UCzQUP1qoWDoEbmsQxvdjxgQ"
+                feedLink: "https://www.youtube.com/channel/UCzQUP1qoWDoEbmsQxvdjxgQ",
+                itemCount: "14",
+                isQuery: false
             },
             {
                 id: "B69zEhWZA8UEAMn3PhHgwARc5WGncWEYFkmfHhvUDpmmwCTb86SBbpJu5kTKr3v5o6YroQ4Jppfgmh6LcqyabuJ1NAzZy3UBF1JfvUYg",
                 url: "https://www.youtube.com/feeds/videos.xml?channel_id&#x3D;UCSHZKyawb77ixDdsGog4iWA",
                 title: "Lex Fridman",
                 displayTitle: "Podcast - Lex Fridman",
-                feedLink: "https://www.youtube.com/channel/UCSHZKyawb77ixDdsGog4iWA"
+                feedLink: "https://www.youtube.com/channel/UCSHZKyawb77ixDdsGog4iWA",
+                itemCount: "2",
+                isQuery: false
             },
             {
                 id: "B69zEhWZA8UEAMn3PhHgwARc5WGncWEYFkmfHhvUDpmmwCTb86SBbpJu5kTKr3v5o6YroQ4JppnTPmKLxpU2tRhdtRTKSt57YWBdJkQg",
                 url: "https://www.youtube.com/feeds/videos.xml?channel_id&#x3D;UCl9StMQ79LtEvlrskzjoYbQ",
                 title: "Closer To Truth",
                 displayTitle: "Podcast - Closer to Truth",
-                feedLink: "https://www.youtube.com/channel/UCl9StMQ79LtEvlrskzjoYbQ"
+                feedLink: "https://www.youtube.com/channel/UCl9StMQ79LtEvlrskzjoYbQ",
+                itemCount: "15",
+                isQuery: false
             },
             {
                 id: "x7L2VSNEiyAFPo5H6bnPWAveyi4npegYaNeyr78Gjr6vQqtjp4cKiAbg9y6hcgadVzEqXA589jFXfyD",
                 url: "https://softwareengineeringdaily.com/category/podcast/feed",
                 title: "Podcast Archives - Software Engineering Daily",
                 displayTitle: "Podcast - Software Engineering Daily",
-                feedLink: "http://softwareengineeringdaily.com/category/all-episodes/exclusive-content/podcast/"
+                feedLink: "http://softwareengineeringdaily.com/category/all-episodes/exclusive-content/podcast/",
+                itemCount: "11",
+                isQuery: false
             },
             {
                 id: "7DceLgR4szFxQ3UB53HWzbG45Ex5fdouH7krrJM2AKs6cssjdexHZCQGYMtghshA1XvfPN6ncGeVc5C7GNvnN",
                 url: "https://link.chtbl.com/corecursive?id&#x3D;corecursive&amp;platform&#x3D;rss",
                 title: "CoRecursive: Coding Stories",
                 displayTitle: "Podcast - CoRecursive",
-                feedLink: "http://corecursive.com/"
+                feedLink: "http://corecursive.com/",
+                itemCount: "1",
+                isQuery: false
             },
             {
                 id: "6C2W1azD1rBrcTRY3HU8boSx83NbkHKLjCRzRoNgHM1f9rDLzUhN2yx",
                 url: "https://anchor.fm/s/174cb1b8/podcast/rss",
                 title: "MLOps.community",
                 displayTitle: "Podcast - MLOps",
-                feedLink: "https://mlops.community/"
+                feedLink: "https://mlops.community/",
+                itemCount: "5",
+                isQuery: false
             },
           ];
       </script>
       <div id="app"></div>
 
-    <script type="module" src="./assets/index.js?tv=1.0.7"></script>
+    <script type="module" src="./assets/index.js?tv=1.1.2"></script>
 
   </body>
 </html>
