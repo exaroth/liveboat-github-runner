@@ -31,7 +31,7 @@ __STEP 2__ Update configuration and urls file
  
 - First edit `./config/liveboat-config.toml` file, update `title` and most importantly `site_path` - this option needs to be set to `/<repo_name>/` where `repo_name` corresponds to repository name created in Step 1.
 
-- Next replace feeds url in `./config/newsboat-urls` with those you want to follow - If you're existing Newsboat user simply copy contents of the `urls` file (typically stored at `~/.newsboat/urls`)
+- Next replace feeds url in `./config/urls` with those you want to follow - If you're existing Newsboat user simply copy contents of the `urls` file (typically stored at `~/.newsboat/urls`)
 
 > [!NOTE]
 > Order of the URLs does matter as it will reflect order of feeds in generated page.

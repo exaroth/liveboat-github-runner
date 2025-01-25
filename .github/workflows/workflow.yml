@@ -61,7 +61,7 @@ jobs:
         if: env.ENABLE_AUTOMATIC_UPDATES == '1'
 
       - name: Run newsboat
-        run: newsboat -u config/newsboat-urls -C config/newsboat-config -c cache.db -x reload
+        run: newsboat -u config/urls -C config/newsboat-config -c cache.db -x reload
 
       - name: Run liveboat
         run: ./bin/liveboat --template-path templates/default --config-file config/liveboat-config.toml

@@ -15,6 +15,6 @@ time_threshold = 40
 show_read_articles = true
 # Below variables define default directories 
 # and typically should not be changed.
-newsboat_urls_file = "./config/newsboat-urls"
+newsboat_urls_file = "./config/urls"
 newsboat_cache_file = "./cache.db"
 build_dir = "./docs"
