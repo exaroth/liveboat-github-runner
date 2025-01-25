@@ -66,6 +66,7 @@ highlight-color = "#73bed3"
 accent-color = "#3c5e8b"
 background-color = "#181818"
 custom-color = "#f3a833"
+autoreload = "1"
 ```
 
 For more advanced template modifications see [Template development guide](https://github.com/exaroth/liveboat/tree/develop/templates).
