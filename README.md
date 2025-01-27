@@ -1,5 +1,5 @@
 <h2 align="center">
-<img align="center" width="70" height="70" src="./assets/logo.png" alt="Liveboat"><br/>
+<img align="center" width="70" height="70" src="./assets/logo.png"><br/>
 <br/>
 Liveboat Github Runner
 </h2>
