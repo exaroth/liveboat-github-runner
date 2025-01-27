@@ -1,10 +1,10 @@
-version = "1.1.9"
+version = "1.2.0"
 builder = "spa"
 
 [template_settings]
+custom-color = "#f3a833"
 highlight-color = "#73bed3"
 text-color = "#c7cfcc"
-background-color = "#121414"
-custom-color = "#f3a833"
 accent-color = "#2D4566"
+background-color = "#121414"
 autoreload = "1"
