@@ -7,6 +7,9 @@
 site_path = "/liveboat-github-runner/"
 # Title of the site
 title = "Liveboat Demo"
+# Update site url if you're planning on using aggregated OPML
+# channel Liveboat exposes.
+site_url = "https://konrad.website/liveboat-github-runner/"
 # Maximum number of days for which Liveboat will include
 # articles for.
 time_threshold = 40
