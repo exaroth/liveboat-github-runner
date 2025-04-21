@@ -4,7 +4,6 @@
 Liveboat Github Runner
 </h2>
 
-
 ### See it in [Action](https://konrad.website/liveboat-github-runner)
 
 <br/>
