@@ -22,15 +22,7 @@ jobs:
           ref: 'master'
 
       - name: Install deps
-        run: sudo apt-get update && sudo apt-get install sqlite3 snapd
-
-      - name: Install newsboat
-        run: source ./scripts/retry.sh && with_retry 5 sudo snap install newsboat
-
-      - name: Fetch liveboat
-        run: |
-          mkdir -p ./bin
-          sh -c 'wget -O ./bin/liveboat https://github.com/exaroth/liveboat/releases/download/stable/liveboat-linux-musl && chmod +x ./bin/liveboat'
+        run: sudo apt-get update && sudo apt-get install sqlite3
 
       - name: Source options
         uses: falti/dotenv-action@v1.1.4
@@ -59,11 +51,11 @@ jobs:
           git add ./templates ./config
         if: env.ENABLE_AUTOMATIC_UPDATES == '1'
 
-      - name: Run newsboat
-        run: newsboat -u config/urls -C config/newsboat-config -c cache.db -x reload
-
-      - name: Run liveboat
-        run: ./bin/liveboat --template-path templates/default --config-file config/liveboat-config.toml
+      - name: Run newsboat + liveboat
+        run: |
+          docker run --rm -v "${{ github.workspace }}:/workspace" -w /workspace ghcr.io/exaroth/liveboat:latest \
+          sh -c "newsboat -u config/urls -C config/newsboat-config -c cache.db -x reload && liveboat --template-path templates/default --config-file config/liveboat-config.toml"
+          sudo chown -R "$(id -u):$(id -g)" .
 
       - name: Truncate database
         run: |
